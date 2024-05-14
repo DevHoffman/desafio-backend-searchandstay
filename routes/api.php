@@ -16,9 +16,9 @@ Route::prefix('/auth')->name('auth.')->group(function () {
 });
 
 Route::prefix('/books')->name('books.')->group(function () {
-    Route::post('list', [BooksController::class, 'list'])->name('list');
+    Route::get('list', [BooksController::class, 'list'])->name('list');
 
-    Route::put('create', [BooksController::class, 'create'])->name('create');
+    Route::post('create', [BooksController::class, 'create'])->name('create');
 
     Route::put('update', [BooksController::class, 'update'])->name('update');
 
@@ -26,9 +26,9 @@ Route::prefix('/books')->name('books.')->group(function () {
 });
 
 Route::prefix('/stores')->name('stores.')->group(function () {
-    Route::post('list', [StoresController::class, 'list'])->name('list');
+    Route::get('list', [StoresController::class, 'list'])->name('list');
 
-    Route::put('create', [StoresController::class, 'create'])->name('create');
+    Route::post('create', [StoresController::class, 'create'])->name('create');
 
     Route::put('update', [StoresController::class, 'update'])->name('update');
 
